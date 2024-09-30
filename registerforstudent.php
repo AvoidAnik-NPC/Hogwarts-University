@@ -1,3 +1,119 @@
+<?php
+
+include("connection.php");
+    session_start();
+    
+    if(!isset($_SESSION['loggedin']) || isset($_SESSION['loggedin'])!=true){
+        header("location:registerforstudent.php");
+        exit;
+    }
+
+    $email = $_SESSION['Email'];
+   // echo $email;
+
+    $Student_ID = "SELECT Student_ID FROM student WHERE Email = '$email'";
+    $result1 = mysqli_query($conn, $Student_ID);
+    $row = mysqli_fetch_assoc($result1);
+  //  echo $row['Student_ID'];  //KAJ KORSEEEE
+    $Std_ID = $row['Student_ID'];
+
+    
+   
+    if(isset($_POST['sub'])){
+
+       
+        $course_id=mysqli_real_escape_string($conn, $_POST['course_id']);
+
+        $Ck_In = "SELECT title,CheckIn,CheckOut, no_of_seats FROM course WHERE course_id = '$course_id'";
+        $result2 = mysqli_query($conn, $Ck_In);
+        $row = mysqli_fetch_assoc($result2);
+        echo $row['CheckIn'];  
+        $Chk_ID = $row['CheckIn'];
+        $title = $row['title'];
+        $Chk_ID2 = $row['CheckOut'];
+
+       // $seat = $row['$no_of_seats'];
+
+        //echo $seat;
+       /* if($seat<=0)
+        {
+            echo '<script>
+            window.location.href="registerforstudent.php";
+            alert("Seat Filled!");
+            </script>';
+        } */
+
+        //$sql = "SELECT * FROM register WHERE Student_ID='$Std_ID' AND course_id='$course_id'"; //It's Working
+        //$sql = " SELECT course.course_id FROM course INNER JOIN register ON 
+                //course.course_id = register.course_id where ()";
+        //$sql="select c.CheckIn from course as c join register as r on c.course_id=r.course_id group by r.Student_ID HAVING r.Student_ID=1001";
+
+        $sql = "SELECT COUNT(reg_id) as overlap 
+        FROM register AS r 
+        JOIN course AS c ON r.course_id = c.course_id 
+        WHERE r.student_id = ? 
+        AND c.course_id <> ? 
+        AND c.checkIN <= ? 
+        AND c.checkOut >= ?";
+
+        $sql2 = "SELECT *  FROM course AS c 
+         JOIN register AS r ON c.course_id = r.course_id 
+         WHERE Student_ID = ? 
+         AND title = ?";
+
+// Prepare and bind parameters for the first query
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "iiss", $Std_ID, $course_id, $Chk_ID, $Chk_ID2);
+
+// Execute the first query
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+$rows = mysqli_fetch_assoc($result);
+$count_user = $rows['overlap'];
+
+// Prepare and bind parameters for the second query
+$stmt2 = mysqli_prepare($conn, $sql2);
+mysqli_stmt_bind_param($stmt2, "is", $Std_ID, $title);
+
+// Execute the second query
+mysqli_stmt_execute($stmt2);
+$result2 = mysqli_stmt_get_result($stmt2);
+$count_user2 = mysqli_num_rows($result2);
+
+// Check conditions and handle accordingly
+if ($count_user == 0 && $count_user2 == 0) {
+    // Insert registration
+    $sql = "INSERT INTO register(status, grade, date, Student_ID, course_id) 
+            VALUES(0, 0.00, CURRENT_TIMESTAMP(), ?, ?)";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "ii", $Std_ID, $course_id);
+    mysqli_stmt_execute($stmt);
+
+    // Redirect
+    echo '<script>
+            window.location.href="registerforstudent.php";
+            alert("Registration Successful!!");
+          </script>';
+    exit; // Exit after redirect
+} elseif ($count_user2 > 0) {
+    // Redirect - Student already registered in this course
+    echo '<script>
+            window.location.href="registerforstudent.php";
+            alert("Student already registered in this course");
+          </script>';
+    exit; // Exit after redirect
+} elseif ($count_user > 0) {
+    // Redirect - Time overlaps
+    echo '<script>
+            window.location.href="registerforstudent.php";
+            alert("Time overlaps!!");
+          </script>';
+    exit; // Exit after redirect
+}
+
+    }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
