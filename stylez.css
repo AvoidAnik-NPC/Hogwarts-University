@@ -1,0 +1,229 @@
+body{    
+    background: url("images/Adminloginbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 150vh;
+  }
+  
+  .navbar-brand{
+      font-size: 35px;
+      background: transparent;
+  }
+  
+  
+  #form{
+      background-color: rgb(255, 255, 255);
+      width:28%;
+      border-radius: 6px;
+      margin:120px auto;
+      padding:40px;
+      box-shadow: 10px 10px 5px rgb(80, 11, 77);
+      margin-top: 25px;
+      background: whitesmoke;
+  }
+  .view
+  {
+    margin-left: 10 cm;
+    margin-right: 10 cm;
+    justify-content: center;
+  }
+  .big-prominent-button {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    padding: 15px 20px; /* Adjust the padding as needed */
+    background-color: #3498db; /* Change the background color to your preferred color */
+    color: #fff; /* Set the text color to contrast with the background */
+    text-decoration: none; /* Remove the default underline for links */
+    border-radius: 5px; /* Add some rounded corners */
+    display: inline-block; /* Ensure that the button takes only the necessary width */
+  }
+  
+
+
+#oform{
+  background-color: rgb(255, 255, 255);
+      width:90vw;
+      height:50vh;
+      border-radius: 6px;
+      margin:120px auto;
+      padding:40px;
+      box-shadow: 10px 10px 5px rgb(80, 11, 77);
+      margin-top: 25px;
+      background: whitesmoke;
+}
+#dform{
+  background-color: rgb(255, 255, 255);
+      width:90vw;
+      height:60vh;
+      border-radius: 6px;
+      margin:120px auto;
+      padding:40px;
+      box-shadow: 10px 10px 5px rgb(80, 11, 77);
+      margin-top: 25px;
+      background: whitesmoke;
+}
+#iform{
+  background-color: rgb(255, 255, 255);
+      width:95vw;
+      height:70vh;
+      border-radius: 6px;
+      margin:120px auto;
+      padding:40px;
+      box-shadow: 10px 10px 5px rgb(80, 11, 77);
+      margin-top: 25px;
+      background: whitesmoke;
+
+}
+#rform{
+  background-color: rgb(255, 255, 255);
+      width:95vw;
+      height:65vh;
+      border-radius: 6px;
+      margin:120px auto;
+      padding:40px;
+      box-shadow: 10px 10px 5px rgb(80, 11, 77);
+      margin-top: 25px;
+      background: whitesmoke;
+
+}
+
+  h1{
+      text-align: center;
+  }
+  input{
+      width: 90%;
+      border-radius: 4px;
+      border: 3px solid #f6efef;
+      padding: 5px;
+  }
+  
+  #btn{
+      width: 100%;
+      color:rgb(255, 255, 255);
+      background-color: rgb(108, 22, 190);
+      padding:10px;
+      font-weight: 700;
+      font-size: larger;
+      border-radius: 10px;
+  }
+
+back{
+  height: 200px;
+  position: relative;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+view{
+  margin: 0;
+      padding: 0;
+     
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+      padding: 100px 20px;
+      background-color: #ffffff;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+}
+clogout{
+  float: right;
+    width: 83%;
+    margin-right: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height:625px;
+    overflow:auto;
+  
+}
+
+
+
+
+
+
+  /* .form label{ */
+      /* color:rgb(100, 100, 100); */
+      /* font-size: 18px; */
+      /* font-weight:500; */
+  /* } */
+  @media screen and (max-width: 1350px) {
+      #form {
+        width: 40%;
+        margin-left:none;
+        padding:40px;
+      }
+    }
+  @media screen and (max-width: 1100px) {
+      #form {
+        width: 50%;
+        margin-left:none;
+        padding:40px;
+      }
+    }
+  @media screen and (max-width: 700px) {
+      #form {
+        width: 80%;
+        margin-left:none;
+        padding:40px;
+      }
+    }
+
+
+/*For Student Sign Up*/
+.header{
+  min-height: 30vh;
+  width:100%;
+  background-image: linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url("images/allnav.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+}   
+nav{
+  display: flex;
+  padding: 2% 6%;
+ 
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+nav img{
+  width: 150 px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+
+}
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13 px;
+}
+.nav-links ul li ::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+.nav-links ul li :hover::after{
+  width: 100%;
+}
+nav.fa{
+  display: none;
+}

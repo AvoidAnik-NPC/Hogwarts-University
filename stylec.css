@@ -1,0 +1,72 @@
+.bottom-navbar {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333; /* Choose your background color */
+    padding: 10px;
+}
+
+.button-link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff; /* Choose your text color */
+    background-color: #007bff; /* Choose your button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.button-link-left{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff; /* Choose your text color */
+    background-color:#007bff; /* Choose your button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+
+}
+.button-link-center{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff; /* Choose your text color */
+    background-color:#009dc4; /* Choose your button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.button-link-right{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff; /* Choose your text color */
+    background-color:red; /* Choose your button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+
+}
+
+/* Adjust styles for each button */
+.button-link:nth-child(1) {
+    /* Bottom Right Button */
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.button-link:nth-child(2) {
+    /* Bottom Center Button */
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.button-link:nth-child(3) {
+    /* Bottom Left Button */
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}

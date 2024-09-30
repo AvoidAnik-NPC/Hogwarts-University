@@ -1,0 +1,63 @@
+#sform {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    border-radius: 6px;
+    margin: 120px auto;
+    padding: 40px;
+    box-shadow: 10px 10px 5px rgb(80, 11, 77);
+    background: whitesmoke;
+}
+#dform {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    border-radius: 6px;
+    margin: 120px auto;
+    padding: 40px;
+    box-shadow: 10px 10px 5px rgb(80, 11, 77);
+    background: whitesmoke;
+}
+#iform {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    border-radius: 6px;
+    margin: 120px auto;
+    padding: 40px;
+    box-shadow: 10px 10px 5px rgb(80, 11, 77);
+    background: whitesmoke;
+}
+#rform {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    border-radius: 6px;
+    margin: 120px auto;
+    padding: 40px;
+    box-shadow: 10px 10px 5px rgb(80, 11, 77);
+    background: whitesmoke;
+}
+.form-label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+.form-control {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+.required::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+.heading-label {
+    display: block;
+    height:50px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background-color: #059DC0;
+    color:white;
+}

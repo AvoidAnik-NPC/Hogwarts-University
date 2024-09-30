@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #343a40;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #454d55;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3,
+.card p {
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.hello {
+    background-color: #454d55;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    justify-content:center;
+    margin-left:0cm;
+}
+
+.logout {
+    position: fixed;
+    top: 10px; /* Adjust this value to change the distance from the top */
+    right: 10px; /* Adjust this value to change the distance from the right */
+    z-index: 999; /* Set a high z-index to ensure it stays on top of other elements */
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}

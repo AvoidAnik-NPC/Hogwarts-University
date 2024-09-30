@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .transparent-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:transparent; /* Adjust the alpha value for transparency */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .back-button {
+    margin-left: 10px;
+  }
+
+  .logout-button {
+    margin-right: 10px;
+  }

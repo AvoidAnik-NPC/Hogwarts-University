@@ -1,0 +1,41 @@
+body, html {
+    background-color: #343a40;
+    color: #727272;
+}
+
+.header, nav, .nav-links a {
+    color: azure;
+}
+
+.card, .table, .btn {
+    background-color: #2a2a2a;
+    color: #aaaaaa;
+}
+
+.thead-dark th {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.form-control, input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
+    background-color: #2a2a2a;
+    color: #eeeded;
+    border: 1px solid #6c757d;
+}
+
+.input-group input::placeholder {
+    color: #b9b8b8;
+}
+
+.form-label {
+    color: #f9f9f9;
+}
+
+.body.dark-theme {
+    background-color: #3e3e3e;
+    color: #585858;
+}
+
+.card-title {
+    color: #ffffff;
+}

@@ -1,0 +1,93 @@
+body {
+    background-image: url('images/databack.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.bottom-navbar {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color:transparent;
+    padding: 10px;
+}
+
+.button-link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent; 
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.button-link-left{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff; /* Choose your text color */
+    background-color:#007bff; /* Choose your button color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+.button-link-right{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff; /* Choose your text color */
+    background-color:red; /* Choose your button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+
+}
+
+/* Adjust styles for each button */
+.button-link:nth-child(1) {
+    /* Bottom Left Button */
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.button-link:nth-child(2) {
+    /* Bottom Right Button */
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+.card {
+    background-color:#343434; /* Darker background for cards */
+    color: #f8f9fa; /* Light text color for cards */
+    border: #212529;
+}
+.card .card-body {
+    background-color:#343434; 
+    border: #212529;/* Darker background for card content */
+    color: #f8f9fa; /* Light text color for card content */
+}
+.table {
+    background-color: #212529; /* Dark background for tables */
+    color: #f8f9fa; /* Light text color for table text */
+}
+.table thead th {
+    background-color: #343a40; /* Darker background for table headers */
+    color: #f8f9fa; /* Light text color for headers */
+}
+.form-control {
+    background-color: #6c757d; /* Dark background for form controls */
+    color: #f8f9fa; /* Light text color for form controls */
+    border-color: #495057; /* Dark border color for form controls */
+}
+.form-control::placeholder {
+    color: #ced4da; /* Placeholder text color */
+}
